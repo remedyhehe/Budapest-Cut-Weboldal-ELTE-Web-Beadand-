@@ -1,0 +1,561 @@
+:root {
+    --bg-color: #121212;
+    --bg-darker: #080808;
+    --text-color: #e0e0e0;
+    --accent-color: #d4af37; /* Gold */
+    --accent-hover: #b8962c;
+    --card-bg: #1e1e1e;
+    --border-color: #333;
+}
+
+html {
+    scroll-padding-top: 90px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .font-oswald, .navbar-brand, .nav-link, .btn {
+    font-family: 'Oswald', sans-serif;
+}
+
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent-color) !important;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker) !important;
+}
+
+.text-justify-custom {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* When hovering over the list, clear the default active styling */
+.navbar-nav:hover .nav-link.active {
+    color: var(--text-color) !important;
+}
+.navbar-nav:hover .nav-link.active::after {
+    width: 0;
+}
+
+/* Apply styling exclusively to the element being currently hovered */
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Buttons */
+.btn-accent {
+    background-color: var(--accent-color);
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 2px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+#heroCarousel {
+    margin-top: 76px; /* Offset for fixed navbar */
+}
+
+.carousel-item {
+    height: 70vh;
+    min-height: 500px;
+    background: #000;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.carousel-caption {
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.carousel-caption h2 {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    letter-spacing: 3px;
+}
+
+/* Slogan */
+.highlight-text {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.4;
+    max-width: 900px;
+    text-transform: uppercase;
+}
+
+/* Sections Global */
+.section-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-color);
+}
+
+/* About Section */
+.about-row p {
+    font-size: 1.05rem;
+    color: #ccc;
+}
+
+.img-wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    transform: translate(15px, 15px);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.img-wrapper:hover::after {
+    transform: translate(8px, 8px);
+}
+
+.about-img {
+    transition: transform 0.5s ease;
+}
+
+.img-wrapper:hover .about-img {
+    transform: scale(1.05);
+}
+
+/* Video */
+.video-container {
+    border: 2px solid var(--border-color);
+    max-width: 900px;
+}
+
+/* Location & Socials */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-color);
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.map-container {
+    border: 2px solid var(--border-color);
+}
+
+.hours-table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hours-table th, .hours-table td {
+    padding: 15px;
+    background-color: transparent !important;
+    border-color: rgba(255,255,255,0.05);
+    color: #ccc;
+}
+
+.hours-table th {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+.table-hover tbody tr:hover td {
+    color: var(--text-color);
+    background-color: rgba(255,255,255,0.02) !important;
+}
+
+/* Barbers */
+.barber-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.barber-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    border-color: var(--accent-color);
+}
+
+.barber-img-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-color);
+    padding: 5px;
+    background-color: #000;
+}
+
+.barber-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.barber-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.barber-desc {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Reviews */
+.reviews-section {
+    background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-darker) 100%);
+}
+
+.stars {
+    color: var(--accent-color);
+    font-size: 2rem;
+}
+
+.review-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+.review-text {
+    color: #bbb;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-darker) !important;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover, .hover-accent:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Responsive fixes */
+@media (max-width: 991px) {
+    .highlight-text {
+        font-size: 1.5rem;
+    }
+    .carousel-item {
+        height: 50vh;
+    }
+    .navbar-nav {
+        text-align: center;
+        padding-top: 1rem;
+    }
+    .nav-item {
+        margin-bottom: 0.8rem;
+    }
+    .navbar-collapse {
+        background-color: rgba(20, 20, 20, 0.98);
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-top: 0.5rem;
+        border: 1px solid var(--border-color);
+    }
+    
+    }
+}
+
+/* Accordion Custom Styles */
+.accordion-button {
+    color: var(--text-color) !important;
+    box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--accent-color) !important;
+    background-color: var(--bg-darker) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+.accordion-button::after {
+    filter: invert(1);
+}
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(35%) saturate(886%) hue-rotate(5deg) brightness(89%) contrast(85%); /* Gold match roughly */
+}
+.accordion-body {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+.accordion-item {
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+}
+
+/* Custom Price Table */
+.custom-price-table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    background: transparent;
+    color: var(--text-color);
+}
+.custom-price-table th {
+    border-bottom: 2px solid var(--accent-color) !important;
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+    background-color: transparent !important;
+}
+.custom-price-table td {
+    background-color: var(--card-bg) !important;
+    border: none !important;
+    padding: 1.2rem;
+    color: var(--text-color);
+}
+.custom-price-table tr td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+.custom-price-table tr:hover td:first-child {
+    border-left: 3px solid var(--accent-color);
+}
+.custom-price-table tr td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-align: right;
+}
+
+/* ---------------------- Booking Form Styles ---------------------- */
+.guide-timeline {
+    position: relative;
+}
+.guide-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 49px; /* roughly center of the 100x100 circle if left aligned but actually they are positioned flex */
+    top: 100px;
+    bottom: -30px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+.guide-timeline .circle {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    position: relative;
+    background-color: var(--bg-dark);
+}
+@media (max-width: 768px) {
+    .guide-timeline .circle { 
+        width: 60px; 
+        height: 60px; 
+    }
+}
+
+/* Step Indicators inside form */
+.step-indicator {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.step-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 0;
+    transform: translateY(-50%);
+}
+.step-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--bg-darker);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.step-circle.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #000;
+}
+
+/* Form Visibility Magic */
+.step-content {
+    display: none;
+    animation: fadeInStep 0.4s ease forwards;
+}
+.step-content.active {
+    display: block;
+}
+
+@keyframes fadeInStep {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Timeslot Inputs */
+.btn-timeslot {
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+.btn-timeslot:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(212, 175, 55, 0.1);
+}
+.btn-check:checked + .btn-timeslot {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #000;
+}
+.form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.form-check-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
