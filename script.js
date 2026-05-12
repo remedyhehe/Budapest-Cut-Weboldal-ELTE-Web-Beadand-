@@ -1,19 +1,34 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Close mobile menu on link click
+document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll('.nav-link');
     const menuToggle = document.getElementById('navbarNav');
-    navLinks.forEach((l) => {
-        l.addEventListener('click', () => {
-            if (menuToggle.classList.contains('show')) {
-                const bsCollapse = bootstrap.Collapse.getInstance(menuToggle) || new bootstrap.Collapse(menuToggle);
-                bsCollapse.hide();
+    if (menuToggle) {
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => {
+                if (menuToggle.classList.contains('show')) {
+                    const bsCollapse = bootstrap.Collapse.getInstance(menuToggle) || new bootstrap.Collapse(menuToggle);
+                    bsCollapse.hide();
+                }
+            });
+        });
+    }
+
+    const contrastToggleBtn = document.getElementById('contrastToggle');
+    if (contrastToggleBtn) {
+        contrastToggleBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.classList.toggle('high-contrast');
+            if (document.body.classList.contains('high-contrast')) {
+                localStorage.setItem('contrast', 'high');
+            } else {
+                localStorage.setItem('contrast', 'normal');
             }
         });
-    });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Multistep form logic
+        if (localStorage.getItem('contrast') === 'high') {
+            document.body.classList.add('high-contrast');
+        }
+    }
+
     const steps = document.querySelectorAll('.step-content');
     const stepIndicators = document.querySelectorAll('.step-circle');
     const nextBtns = document.querySelectorAll('.next-step');
@@ -24,14 +39,13 @@ document.addEventListener("DOMContentLoaded", function() {
         steps.forEach((step, i) => {
             if (i === index) {
                 step.classList.add('active');
-                stepIndicators[i].classList.add('active');
+                if (stepIndicators[i]) stepIndicators[i].classList.add('active');
             } else {
                 step.classList.remove('active');
-                // Optional: keep previous steps active visually
                 if (i < index) {
-                    stepIndicators[i].classList.add('active');
+                    if (stepIndicators[i]) stepIndicators[i].classList.add('active');
                 } else {
-                    stepIndicators[i].classList.remove('active');
+                    if (stepIndicators[i]) stepIndicators[i].classList.remove('active');
                 }
             }
         });
@@ -42,8 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         nextBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // In a real app we'd trigger HTML5 validation here. 
-                // For layout purposes, proceeding directly.
                 if (currentStep < steps.length - 1) {
                     currentStep++;
                     showStep(currentStep);

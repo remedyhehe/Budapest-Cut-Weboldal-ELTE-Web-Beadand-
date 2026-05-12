@@ -13,31 +13,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-3">
-        <div class="container">
-            <a class="navbar-brand text-accent" href="#"><i class="fa-solid fa-scissors me-2"></i> Budapest <span class="text-white">Cut</a>
-            <button class="navbar-toggler border-0 shadow-none text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars fs-3"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto fw-semibold">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Kezdőlap</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="arlista.html">Árlista</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="foglalas.html">Foglalás</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-3">
+            <div class="container">
+                <a class="navbar-brand text-accent" href="index.html"><i class="fa-solid fa-scissors me-2"></i> Budapest <span class="text-white">Cut</span></a>
+                <button class="navbar-toggler border-0 shadow-none text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fa-solid fa-bars fs-3"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fw-semibold">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Kezdőlap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="arlista.html">Árlista</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="foglalas.html">Foglalás</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="contrastToggle"><i class="fa-solid fa-circle-half-stroke me-1"></i> Kontraszt</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <main>
-        <header id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
@@ -45,32 +49,28 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Barbershop Belső">
-                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Sötét hangulatú barbershop belső tér, kényelmes bőrborítású székekkel.">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Borbély székek">
-                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Elegáns borbély székek sorakoznak a fa padlón a szalonban.">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Szakállvágás">
-                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Profi borbély éppen precíz szakállvágást végez a vendégen.">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Előző</span>
+                <span class="visually-hidden">Előző kép</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Következő</span>
+                <span class="visually-hidden">Következő kép</span>
             </button>
-        </header>
+        </div>
+    </header>
 
-        <section class="slogan-section text-center py-4">
+    <main id="main-content">
+        <section class="slogan-section text-center py-5">
             <div class="container">
                 <h1 class="lead-text mt-4 mx-auto highlight-text">
                     Budapest Cut, ahol a <span class="text-accent">hagyományos borbélymesterség</span> találkozik a modern stílussal
@@ -84,34 +84,51 @@
                 
                 <div class="row align-items-center mb-5 about-row">
                     <div class="col-lg-6 mb-4 mb-lg-0 px-md-4 text-justify-custom">
-                        <p class="fade-in-up">A Budapest Cut története nem egy üzleti tervvel, hanem egy baráti beszélgetéssel kezdődött. 2019-ben jött egy ötlet az akkori munkatársaimmal, miközben a műszak végén a szakma jövőjéről álmodoztunk: mi lenne, ha nem mások szabályai szerint dolgoznánk, hanem nyitnánk egy saját üzletet? Egy olyan helyet, ahol a vendég nem csak egy sorszám, és ahol a borbélymesterség iránti alázat minden mozdulatban látszik.</p>
-                        <p class="fade-in-up delay-1">Az ötletet tettek követték, és bár az indulás óta sok minden változott, az alapértékeink ugyanazok maradtak. Ma már büszkén mondhatjuk, hogy a nálunk dolgozó srácok Atyesz, Dávid és Balázs nemcsak kollégák, hanem egy olyan csapat, akik szívvel-lélekkel építik ezt a közösséget.</p>
+                        <p>A Budapest Cut története nem egy üzleti tervvel, hanem egy baráti beszélgetéssel kezdődött. 2019-ben jött egy ötlet az akkori munkatársaimmal, miközben a műszak végén a szakma jövőjéről álmodoztunk: mi lenne, ha nem mások szabályai szerint dolgoznánk, hanem nyitnánk egy saját üzletet? Egy olyan helyet, ahol a vendég nem csak egy sorszám, és ahol a borbélymesterség iránti alázat minden mozdulatban látszik.</p>
+                        <p>Az ötletet tettek követték, és bár az indulás óta sok minden változott, az alapértékeink ugyanazok maradtak. Ma már büszkén mondhatjuk, hogy a nálunk dolgozó srácok Atyesz, Dávid és Balázs nemcsak kollégák, hanem egy olyan csapat, akik szívvel-lélekkel építik ezt a közösséget.</p>
                     </div>
                     <div class="col-lg-6 text-center">
-                        <div class="img-wrapper">
-                            <img src="img/RandomKep.jpg" alt="Egy kép a borbélyüzletben" width="800px" class="img-fluid rounded about-img">
-                        </div>
+                        <figure class="img-wrapper d-inline-block m-0">
+                            <a href="img/RandomKep.jpg" target="_blank" class="thumbnail-link d-block" aria-label="Nagyobb kép megtekintése: Borbélyüzlet belső">
+                                <img src="img/RandomKep.jpg" alt="A Budapest Cut borbélyüzlet barátságos, modern és tiszta belső tere." class="img-fluid rounded about-img">
+                            </a>
+                            <figcaption class="text-light mt-2 small">Szalonunk belülről</figcaption>
+                        </figure>
                     </div>
                 </div>
 
                 <div class="row align-items-center about-row flex-column-reverse flex-lg-row">
                     <div class="col-lg-6 text-center mb-4 mb-lg-0">
-                        <div class="img-wrapper slide-in-left">
-                            <img src="img/IsmerjMeg.jpg" alt="A csapatunkról egy kép" width="800px" class="img-fluid rounded about-img">
-                        </div>
+                        <figure class="img-wrapper d-inline-block m-0">
+                            <a href="img/IsmerjMeg.jpg" target="_blank" class="thumbnail-link d-block" aria-label="Nagyobb kép megtekintése: Csapatunk">
+                                <img src="img/IsmerjMeg.jpg" alt="A Budapest Cut mosolygós csapata: Atyesz, Dávid és Balázs együtt a szalonban." class="img-fluid rounded about-img">
+                            </a>
+                            <figcaption class="text-light mt-2 small">A csapat: Atyesz, Dávid és Balázs</figcaption>
+                        </figure>
                     </div>
                     <div class="col-lg-6 px-md-4 text-justify-custom">
-                        <p class="fade-in-up">Nálunk a hagyományos borbélymesterség találkozik a modern stílussal, legyen szó egy klasszikus ollós vágásról vagy a legprecízebb skinfade-ről. Célunk, hogy amikor belépsz hozzánk, magad mögött hagyd a város zaját.</p>
-                        <p class="fade-in-up delay-1">Itt nemcsak a hajadat és a szakálladat tesszük rendbe, hanem egy olyan élményt adunk, ami után felfrissülve és magabiztosan távozol. Gyere el hozzánk, ismerd meg a csapatot, és légy te is részese a Budapest Cut sztorijának!</p>
+                        <p>Nálunk a hagyományos borbélymesterség találkozik a modern stílussal, legyen szó egy klasszikus ollós vágásról vagy a legprecízebb skinfade-ről. Célunk, hogy amikor belépsz hozzánk, magad mögött hagyd a város zaját.</p>
+                        <p>Itt nemcsak a hajadat és a szakálladat tesszük rendbe, hanem egy olyan élményt adunk, ami után felfrissülve és magabiztosan távozol. Gyere el hozzánk, ismerd meg a csapatot, és légy te is részese a Budapest Cut sztorijának!</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="video-section py-5 bg-darker">
-            <div class="container text-center">
-                <div class="ratio ratio-16x9 video-container mx-auto rounded overflow-hidden">
-                    <video src="video.mp4" controls class="w-100 h-100 object-fit-cover" poster="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"></video>
+            <div class="container">
+                <h2 class="section-title text-center mb-5 d-block mx-auto">Nézz be hozzánk (Videó)</h2>
+                <div class="ratio ratio-16x9 video-container mx-auto rounded overflow-hidden mb-4">
+                    <video src="video.mp4" controls class="w-100 h-100 object-fit-cover" poster="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80">
+                        A böngésződ nem támogatja a videók lejátszását.
+                    </video>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <details class="bg-dark p-3 rounded border border-secondary">
+                            <summary class="text-accent fw-bold cursor-pointer">Videó részletes szöveges leírása</summary>
+                            <p class="text-light mt-3 mb-0">A videó 30 másodpercben mutatja be a Budapest Cut szalon mindennapjait. Az első jelenetben látható, ahogy egy vendég belép az ajtón, majd Atyesz üdvözli és leülteti a kényelmes borbélyszékbe. Ezt követően közeli felvételeket láthatunk egy precíz ollós hajvágásról, majd egy gépi szakálligazításról, éles kontúrok kialakításával. A háttérben szóló nyugtató zene mellett látszik a mosolygós és barátságos légkör. A videó azzal zárul, hogy a vendég elégedetten belenéz a tükörbe, majd a kamera ráközelít a szalon logójára.</p>
+                        </details>
+                    </div>
                 </div>
             </div>
         </section>
@@ -122,30 +139,34 @@
                 
                 <div class="row gx-3 gx-lg-5 mb-5 align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <p class="text-justify-custom">Akár tömegközlekedéssel, akár autóval érkezel, könnyen ránk találsz. A legközelebbi metró- és villamosmegállótól mindössze pár perc séta választ el minket, így a reggeli munka előtti vagy a délutáni, zárás környéki időpontok is kényelmesen tarthatóak számodra. Ha autóval jössz, a környéken számos parkolási lehetőség áll rendelkezésedre, de érdemes pár perccel korábban érkezned, hogy biztosan legyen helyed a foglalásod kezdetére.</p>
+                        <aside class="p-4 bg-dark rounded border border-secondary mb-4">
+                            <h3 class="font-oswald text-accent mb-3">Könnyű megközelíthetőség</h3>
+                            <p class="text-justify-custom text-light mb-0">Akár tömegközlekedéssel, akár autóval érkezel, könnyen ránk találsz. A legközelebbi metró- és villamosmegállótól mindössze pár perc séta választ el minket, így a reggeli munka előtti vagy a délutáni, zárás környéki időpontok is kényelmesen tarthatóak számodra. Ha autóval jössz, a környéken számos parkolási lehetőség áll rendelkezésedre, de érdemes pár perccel korábban érkezned, hogy biztosan legyen helyed a foglalásod kezdetére.</p>
+                        </aside>
                         
-                        <div class="social-icons mt-4">
-                            <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="http://x.com/" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <h4 class="text-white mt-4 font-oswald">Kövess minket:</h4>
+                        <div class="social-icons mt-3">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Látogass el Instagram oldalunkra"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="http://x.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Látogass el X (Twitter) oldalunkra"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Látogass el Facebook oldalunkra"><i class="fa-brands fa-facebook-f"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="map-container rounded overflow-hidden">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.079088830079!2d19.1120443!3d47.41039850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741e83e57c27c7d%3A0x64a5b9569e0039ff!2sBudapest%2C%20Grassalkovich%20%C3%BAt%2031%2C%201238!5e0!3m2!1shu!2shu!4v1776338885713!5m2!1shu!2shu" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.079088830079!2d19.1120443!3d47.41039850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741e83e57c27c7d%3A0x64a5b9569e0039ff!2sBudapest%2C%20Grassalkovich%20%C3%BAt%2031%2C%201238!5e0!3m2!1shu!2shu!4v1776338885713!5m2!1shu!2shu" class="map-iframe" title="Térkép a Budapest Cut szalonhoz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-5 p-4 rounded bg-darker">
+                <div class="mt-5 p-4 rounded bg-darker border border-secondary">
                     <div class="row gx-3 gx-lg-5 align-items-center">
                         <div class="col-lg-5 mb-4 mb-lg-0">
                             <h4 class="text-accent mb-4 fw-bold font-oswald text-uppercase">Nyitvatartás</h4>
                             <table class="table table-dark table-striped m-0 hours-table">
                                 <thead>
                                     <tr>
-                                        <th>Nap</th>
-                                        <th>Nyitvatartás</th>
+                                        <th scope="col">Nap</th>
+                                        <th scope="col">Nyitvatartás</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -160,7 +181,40 @@
                             </table>
                         </div>
                         <div class="col-lg-7 pl-lg-5">
-                            <p class="text-justify-custom text-light mb-0 p-3">Hétköznaponként reggel 09:00-tól egészen este 20:00-ig nyitva vagyunk, hogy a legelfoglaltabb üzletemberek és diákok is találjanak maguknak szabad sávot. Szombaton rövidített nyitvatartással, 09:00 és 16:00 között pörgetjük a székeket, a vasárnapot pedig mi is pihenéssel töltjük, hogy hétfőn újult erővel vágjuk a legmenőbb sérókat. <br><br><strong class="text-accent font-oswald fs-5">Nézz be hozzánk, dobd le a kabátod, és hagyd, hogy Atyesz, Dávid vagy Balázs kezelésbe vegyen!</strong></p>
+                            <p class="text-justify-custom text-light mb-4 p-3">Hétköznaponként reggel 09:00-tól egészen este 20:00-ig nyitva vagyunk, hogy a legelfoglaltabb üzletemberek és diákok is találjanak maguknak szabad sávot. Szombaton rövidített nyitvatartással, 09:00 és 16:00 között pörgetjük a székeket, a vasárnapot pedig mi is pihenéssel töltjük, hogy hétfőn újult erővel vágjuk a legmenőbb sérókat. <br><br><strong class="text-accent font-oswald fs-5">Nézz be hozzánk, dobd le a kabátod, és hagyd, hogy csapatunk kezelésbe vegyen!</strong></p>
+
+                            <details class="bg-dark p-3 rounded">
+                                <summary class="text-accent fw-bold cursor-pointer">Borbélyaink kiemelt specialitásai (Táblázat)</summary>
+                                <div class="table-responsive mt-3">
+                                    <table class="table custom-price-table m-0">
+                                        <caption class="text-light text-start pt-2">A szalonban dolgozó borbélyok szakértelme és tapasztalata.</caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Név</th>
+                                                <th scope="col">Specialitás</th>
+                                                <th scope="col">Tapasztalat</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Atyesz</td>
+                                                <td>Klasszikus ollós vágás</td>
+                                                <td>10+ év</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dávid</td>
+                                                <td>Modern Skinfade</td>
+                                                <td>5 év</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Balázs</td>
+                                                <td>Szakállformázás</td>
+                                                <td>7 év</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </details>
                         </div>
                     </div>
                 </div>
@@ -175,33 +229,33 @@
                 
                 <div class="row g-4 justify-content-center">
                     <div class="col-md-6 col-lg-4 text-center">
-                        <div class="barber-card p-4 h-100 rounded">
-                            <div class="barber-img-wrapper mx-auto mb-4 placeholder-glow">
-                                <img src="img/Atyesz.jpg" width="400px" alt="Atyesz" class="barber-img">
+                        <article class="barber-card p-4 h-100 rounded">
+                            <div class="barber-img-wrapper mx-auto mb-4">
+                                <img src="img/Atyesz.jpg" alt="Atyesz, a Budapest Cut alapítója és mesterborbélya" class="barber-img">
                             </div>
                             <h3 class="barber-name text-accent">Atyesz</h3>
                             <p class="barber-desc">A szalon egyik alapítója, aki a klasszikus borbélyhagyományok és a precíz ollóhasználat mestere. Ha fontos számodra a nyugodt tempó és a szakma iránti alázat, nála a legjobb kezekben vagy.</p>
-                        </div>
+                        </article>
                     </div>
                     
                     <div class="col-md-6 col-lg-4 text-center">
-                        <div class="barber-card p-4 h-100 rounded">
+                        <article class="barber-card p-4 h-100 rounded">
                             <div class="barber-img-wrapper mx-auto mb-4">
-                                <img src="img/David.jpg" width="400px" alt="Dávid" class="barber-img">
+                                <img src="img/David.jpg" alt="Dávid, a modern skinfade frizurák specialistája" class="barber-img">
                             </div>
                             <h3 class="barber-name text-accent">Dávid</h3>
                             <p class="barber-desc">A modern stílusok és a tűpontos átmenetek specialistája. Dávid naprakész a legújabb skinfade trendekben, így ha friss és éles vonalakra vágysz, ő a te embered.</p>
-                        </div>
+                        </article>
                     </div>
                     
                     <div class="col-md-6 col-lg-4 text-center">
-                        <div class="barber-card p-4 h-100 rounded">
+                        <article class="barber-card p-4 h-100 rounded">
                             <div class="barber-img-wrapper mx-auto mb-4">
-                                <img src="img/Balazs.jpg" width="400px" alt="Balázs" class="barber-img">
+                                <img src="img/Balazs.jpg" alt="Balázs, a szakállformázás mestere" class="barber-img">
                             </div>
                             <h3 class="barber-name text-accent">Balázs</h3>
                             <p class="barber-desc">A szakállformázás szakértője, aki milliméteres pontossággal igazítja ki az arcformádhoz illő fazont. Barátságos stílusa és szakmai tanácsai miatt gyorsan a vendégek kedvencévé vált.</p>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -210,74 +264,74 @@
         <section class="py-5 reviews-section">
             <div class="container text-center">
                 <h2 class="section-title mb-2">Visszajelzések alapján</h2>
-                <div class="stars mb-2">
+                <div class="stars mb-2" aria-hidden="true">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h3 class="fs-4 text-accent font-oswald mb-5">-ra értékelve!</h3>
+                <h3 class="fs-4 text-accent font-oswald mb-5">Öt csillagra értékelve!</h3>
                 
                 <div class="row g-4 justify-content-center">
                     <div class="col-md-6 col-lg-3">
-                        <div class="review-card h-100 p-4 rounded text-start">
+                        <article class="review-card h-100 p-4 rounded text-start">
                             <div class="review-header d-flex align-items-center mb-3">
-                                <div class="review-avatar me-3 bg-accent text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center">G</div>
+                                <div class="review-avatar me-3 bg-accent text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" aria-hidden="true">G</div>
                                 <div>
-                                    <h5 class="mb-0 fw-bold">Gergő</h5>
-                                    <div class="review-stars text-accent small">
+                                    <h5 class="mb-0 fw-bold text-white">Gergő</h5>
+                                    <div class="review-stars text-accent small" aria-label="5 csillag">
                                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
                             <p class="review-text mb-0 fst-italic">"Atyesz profi, a séróm pedig tízpontos. Ez a kedvenc helyem a városban!"</p>
-                        </div>
+                        </article>
                     </div>
                     
                     <div class="col-md-6 col-lg-3">
-                        <div class="review-card h-100 p-4 rounded text-start">
+                        <article class="review-card h-100 p-4 rounded text-start">
                             <div class="review-header d-flex align-items-center mb-3">
-                                <div class="review-avatar me-3 bg-accent text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center">A</div>
+                                <div class="review-avatar me-3 bg-accent text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" aria-hidden="true">A</div>
                                 <div>
-                                    <h5 class="mb-0 fw-bold">András</h5>
-                                    <div class="review-stars text-accent small">
+                                    <h5 class="mb-0 fw-bold text-white">András</h5>
+                                    <div class="review-stars text-accent small" aria-label="5 csillag">
                                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
                             <p class="review-text mb-0 fst-italic">"Dávid vágta a skinfade-emet, brutál precíz lett. Szuper a hangulat is! Balázs érti a dolgát, a szakállam végre úgy néz ki, ahogy akartam. Ajánlom!"</p>
-                        </div>
+                        </article>
                     </div>
                     
                     <div class="col-md-6 col-lg-3">
-                        <div class="review-card h-100 p-4 rounded text-start">
+                        <article class="review-card h-100 p-4 rounded text-start">
                             <div class="review-header d-flex align-items-center mb-3">
-                                <div class="review-avatar me-3 bg-accent text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center">P</div>
+                                <div class="review-avatar me-3 bg-accent text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" aria-hidden="true">P</div>
                                 <div>
-                                    <h5 class="mb-0 fw-bold">Peti</h5>
-                                    <div class="review-stars text-accent small">
+                                    <h5 class="mb-0 fw-bold text-white">Peti</h5>
+                                    <div class="review-stars text-accent small" aria-label="5 csillag">
                                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
                             <p class="review-text mb-0 fst-italic">"Végre egy hely, ahol nem futószalagon vágnak. Atyesz figyel minden részletre, a kávé pedig külön plusz pont!"</p>
-                        </div>
+                        </article>
                     </div>
                     
                     <div class="col-md-6 col-lg-3">
-                        <div class="review-card h-100 p-4 rounded text-start">
+                        <article class="review-card h-100 p-4 rounded text-start">
                             <div class="review-header d-flex align-items-center mb-3">
-                                <div class="review-avatar me-3 bg-accent text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center">I</div>
+                                <div class="review-avatar me-3 bg-accent text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" aria-hidden="true">I</div>
                                 <div>
-                                    <h5 class="mb-0 fw-bold">István</h5>
-                                    <div class="review-stars text-accent small">
+                                    <h5 class="mb-0 fw-bold text-white">István</h5>
+                                    <div class="review-stars text-accent small" aria-label="5 csillag">
                                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
                             <p class="review-text mb-0 fst-italic">"Dávid kezében a gép varázsol, a skinfade átmenetem még sosem volt ilyen éles. Maximális elégedettség"</p>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -289,13 +343,13 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <h3 class="text-accent font-oswald mb-3"><i class="fa-solid fa-scissors me-2"></i> Budapest <span class="text-white">Cut</span></h3>
-                    <p class="mb-4 small pe-4">Budapest Cut, ahol a hagyományos borbélymesterség találkozik a modern stílussal. Tapasztald meg a prémium minőséget egy barátságos környezetben.</p>
+                    <p class="mb-4 small pe-4 text-light">Budapest Cut, ahol a hagyományos borbélymesterség találkozik a modern stílussal. Tapasztald meg a prémium minőséget egy barátságos környezetben.</p>
                 </div>
                 
                 <div class="col-lg-2 col-md-6">
                     <h5 class="text-white mb-3 font-oswald">Gyorslinkek</h5>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="#">Kezdőlap</a></li>
+                        <li><a href="index.html">Kezdőlap</a></li>
                         <li><a href="arlista.html">Árlista</a></li>
                         <li><a href="foglalas.html">Foglalás</a></li>
                     </ul>
@@ -303,33 +357,32 @@
                 
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-3 font-oswald">Kapcsolat</h5>
-                    <ul class="list-unstyled small footer-contact">
+                    <ul class="list-unstyled small footer-contact text-light">
                         <li class="mb-2"><i class="fa-solid fa-location-dot text-accent me-2"></i> 1238 Budapest, Aranykalász utca 17.</li>
                         <li class="mb-2"><i class="fa-solid fa-phone text-accent me-2"></i> +36 70 600 6092</li>
-                        <li class="mb-2"><i class="fa-solid fa-envelope text-accent me-2"></i> ndndd0@inf.elte.hu</li>
+                        <li class="mb-2"><i class="fa-solid fa-envelope text-accent me-2"></i> info@budapestcut.hu</li>
                     </ul>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-3 font-oswald">Nyitvatartás</h5>
-                    <p class="small mb-1">Hétfő - Péntek: 09:00 - 20:00</p>
-                    <p class="small mb-1">Szombat: 09:00 - 16:00</p>
+                    <p class="small mb-1 text-light">Hétfő - Péntek: 09:00 - 20:00</p>
+                    <p class="small mb-1 text-light">Szombat: 09:00 - 16:00</p>
                     <p class="text-accent small fw-bold mt-2">Vasárnap: Zárva</p>
                 </div>
             </div>
             
             <div class="row align-items-center mt-4 pt-4 border-top border-secondary">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="small mb-0">&copy; Minden jog fenntartva.</p>
+                    <p class="small mb-0 text-light">&copy; Minden jog fenntartva.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-2 mt-md-0 d-flex justify-content-center justify-content-md-end gap-3">
-                    <a href="#" class=" small text-white text-decoration-none hover-accent">Jogi információk</a>
+                    <a href="arlista.html" class="small text-white text-decoration-none hover-accent">Szolgáltatásaink</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>

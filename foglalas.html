@@ -13,32 +13,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-3">
-        <div class="container">
-            <a class="navbar-brand text-accent" href="index.html"><i class="fa-solid fa-scissors me-2"></i> Budapest <span class="text-white">Cut</span></a>
-            <button class="navbar-toggler border-0 shadow-none text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars fs-3"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto fw-semibold">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Kezdőlap</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="arlista.html">Árlista</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="foglalas.html">Foglalás</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-3">
+            <div class="container">
+                <a class="navbar-brand text-accent" href="index.html"><i class="fa-solid fa-scissors me-2"></i> Budapest <span class="text-white">Cut</span></a>
+                <button class="navbar-toggler border-0 shadow-none text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fa-solid fa-bars fs-3"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fw-semibold">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Kezdőlap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="arlista.html">Árlista</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="foglalas.html">Foglalás</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="contrastToggle"><i class="fa-solid fa-circle-half-stroke me-1"></i> Kontraszt</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <main class="pt-5 mt-5">
+    <main id="main-content" class="pt-5 mt-5">
         
-        <!-- Booking Guide Section -->
         <section class="py-5">
             <div class="container">
                 <h1 class="section-title text-center mb-5 d-block mx-auto">Így tudsz hozzánk foglalni!</h1>
@@ -47,8 +52,7 @@
                     <div class="col-lg-8">
                         <div class="guide-timeline">
                             
-                            <!-- Guide Step 1 -->
-                            <div class="guide-item d-flex mb-5">
+                            <article class="guide-item d-flex mb-5">
                                 <div class="guide-number">
                                     <div class="circle rounded-circle border border-2 border-secondary d-flex align-items-center justify-content-center bg-darker fs-2 font-oswald text-white">1.</div>
                                 </div>
@@ -56,10 +60,9 @@
                                     <h3 class="font-oswald text-accent mb-3">Szolgáltatás kiválasztása</h3>
                                     <p class="text-light">Első lépésként válaszd ki a listából azt a szolgáltatást, amire szükséged van. Legyen szó egy precíz Normál hajvágásról, egy stílusos Skinfade átmenetről vagy egy teljes Szakáll és hajvágás csomagról, nálunk mindenre találsz opciót. Figyelj az időtartamokra is, hiszen minden szolgáltatásunkhoz fixen 40 percet biztosítunk, hogy ne kelljen kapkodni.</p>
                                 </div>
-                            </div>
+                            </article>
                             
-                            <!-- Guide Step 2 -->
-                            <div class="guide-item d-flex mb-5">
+                            <article class="guide-item d-flex mb-5">
                                 <div class="guide-number">
                                     <div class="circle rounded-circle border border-2 border-secondary d-flex align-items-center justify-content-center bg-darker fs-2 font-oswald text-white">2.</div>
                                 </div>
@@ -67,10 +70,9 @@
                                     <h3 class="font-oswald text-accent mb-3">Borbély kiválasztása</h3>
                                     <p class="text-light">Miután megvagy a szolgáltatással, döntsd el, kihez szeretnél ülni a székbe. Választhatod a szalon alapítóját, Atyeszt, a modern stílusok mesterét, Dávidot, vagy a szakállak specialistáját, Balázst. Ha nincs preferenciád, egyszerűen válaszd az "Első szabad borbély" opciót a leggyorsabb időpontért.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Guide Step 3 -->
-                            <div class="guide-item d-flex mb-5">
+                            <article class="guide-item d-flex mb-5">
                                 <div class="guide-number">
                                     <div class="circle rounded-circle border border-2 border-secondary d-flex align-items-center justify-content-center bg-darker fs-2 font-oswald text-white">3.</div>
                                 </div>
@@ -78,10 +80,9 @@
                                     <h3 class="font-oswald text-accent mb-3">Időpontkeresés</h3>
                                     <p class="text-light">A naptárban látni fogod a srácok szabad sávjait a hét minden napjára. Ne feledd, hogy hétköznap 09:00 és 20:00 között várunk, szombaton pedig 09:00-tól 16:00-ig tudsz foglalni. Keress egy olyan napot és órát, ami a legjobban illeszkedik a naptáradhoz, majd kattints rá a kiválasztáshoz.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Guide Step 4 -->
-                            <div class="guide-item d-flex mb-5">
+                            <article class="guide-item d-flex mb-5">
                                 <div class="guide-number">
                                     <div class="circle rounded-circle border border-2 border-secondary d-flex align-items-center justify-content-center bg-darker fs-2 font-oswald text-white">4.</div>
                                 </div>
@@ -89,13 +90,12 @@
                                     <h3 class="font-oswald text-accent mb-3">Saját adatok megadása</h3>
                                     <p class="text-light">Az utolsó lépésben kérünk, add meg a nevedet, telefonszámodat és az e-mail címedet. Erre azért van szükség, hogy küldhessünk egy visszaigazoló üzenetet, illetve emlékeztetőt a foglalásod előtt. Ha minden adat stimmel, kattints a "Foglalj időpontot!" gombra, és már kész is vagyunk.</p>
                                 </div>
-                            </div>
+                            </article>
 
                         </div>
                     </div>
                 </div>
                 
-                <!-- Divider -->
                 <div class="row justify-content-center my-5">
                     <div class="col-lg-10">
                         <hr class="border-secondary mb-5">
@@ -105,7 +105,6 @@
             </div>
         </section>
 
-        <!-- Booking Form Section -->
         <section class="pb-5 mb-5" id="booking-form-anchor">
             <div class="container">
                 <h2 class="section-title text-center mb-5 d-block mx-auto">Foglalj időpontot!</h2>
@@ -114,8 +113,7 @@
                     <div class="col-lg-8">
                         <div class="card bg-darker border-secondary p-4 p-md-5 rounded shadow-lg">
                             
-                            <!-- Step Indicators -->
-                            <div class="step-indicator mb-5">
+                            <div class="step-indicator mb-5" aria-hidden="true">
                                 <div class="step-line"></div>
                                 <div class="step-circle active font-oswald fs-5">1.</div>
                                 <div class="step-circle font-oswald fs-5">2.</div>
@@ -123,13 +121,13 @@
                                 <div class="step-circle font-oswald fs-5">4.</div>
                             </div>
 
-                            <form id="bookingForm" onsubmit="event.preventDefault();">
+                            <form id="bookingForm" onsubmit="event.preventDefault(); alert('Sikeres foglalás! Hamarosan küldünk egy megerősítő e-mailt.');">
                                 
-                                <!-- Step 1 -->
                                 <div class="step-content active" id="step1">
-                                    <h3 class="text-center font-oswald mb-4">Válassz szolgáltatást!</h3>
+                                    <h3 class="text-center font-oswald text-white mb-4">Válassz szolgáltatást!</h3>
                                     <div class="mb-4">
-                                        <select class="form-select form-select-lg bg-dark text-white border-secondary shadow-none" required>
+                                        <label for="serviceSelect" class="form-label visually-hidden">Szolgáltatás</label>
+                                        <select id="serviceSelect" class="form-select form-select-lg bg-dark text-white border-secondary shadow-none" required>
                                             <option value="" disabled selected>Válassz a listából...</option>
                                             <option value="1">Normál hajvágás</option>
                                             <option value="2">Prémium hajvágás</option>
@@ -144,11 +142,11 @@
                                     </div>
                                 </div>
 
-                                <!-- Step 2 -->
                                 <div class="step-content" id="step2">
-                                    <h3 class="text-center font-oswald mb-4">Borbély kiválasztása!</h3>
+                                    <h3 class="text-center font-oswald text-white mb-4">Borbély kiválasztása!</h3>
                                     <div class="mb-4">
-                                        <select class="form-select form-select-lg bg-dark text-white border-secondary shadow-none" required>
+                                        <label for="barberSelect" class="form-label visually-hidden">Borbély</label>
+                                        <select id="barberSelect" class="form-select form-select-lg bg-dark text-white border-secondary shadow-none" required>
                                             <option value="0" selected>Első szabad borbély</option>
                                             <option value="1">Atyesz</option>
                                             <option value="2">Dávid</option>
@@ -161,15 +159,15 @@
                                     </div>
                                 </div>
 
-                                <!-- Step 3 -->
                                 <div class="step-content" id="step3">
-                                    <h3 class="text-center font-oswald mb-4">Válassz időpontot!</h3>
+                                    <h3 class="text-center font-oswald text-white mb-4">Válassz időpontot!</h3>
                                     
                                     <div class="mb-4">
-                                        <input type="date" class="form-control form-control-lg bg-dark text-white border-secondary shadow-none mb-4" required>
+                                        <label for="dateSelect" class="form-label visually-hidden">Dátum</label>
+                                        <input type="date" id="dateSelect" class="form-control form-control-lg bg-dark text-white border-secondary shadow-none mb-4" required>
                                         
                                         <div class="row g-3">
-                                            <div class="col-6 col-md-4"><input type="radio" class="btn-check" name="timeslot" id="t1"><label class="btn btn-outline-secondary w-100 py-2 btn-timeslot" for="t1">09:00 - 10:00</label></div>
+                                            <div class="col-6 col-md-4"><input type="radio" class="btn-check" name="timeslot" id="t1" required><label class="btn btn-outline-secondary w-100 py-2 btn-timeslot" for="t1">09:00 - 10:00</label></div>
                                             <div class="col-6 col-md-4"><input type="radio" class="btn-check" name="timeslot" id="t2"><label class="btn btn-outline-secondary w-100 py-2 btn-timeslot" for="t2">10:00 - 11:00</label></div>
                                             <div class="col-6 col-md-4"><input type="radio" class="btn-check" name="timeslot" id="t3"><label class="btn btn-outline-secondary w-100 py-2 btn-timeslot" for="t3">11:00 - 12:00</label></div>
                                             <div class="col-6 col-md-4"><input type="radio" class="btn-check" name="timeslot" id="t4"><label class="btn btn-outline-secondary w-100 py-2 btn-timeslot" for="t4">12:00 - 13:00</label></div>
@@ -189,50 +187,49 @@
                                     </div>
                                 </div>
 
-                                <!-- Step 4 -->
                                 <div class="step-content" id="step4">
-                                    <h3 class="text-center font-oswald mb-4">Saját adatok megadása</h3>
+                                    <h3 class="text-center font-oswald text-white mb-4">Saját adatok megadása</h3>
                                     
                                     <div class="mb-4">
-                                        <label class="form-label text-light">Add meg a teljes neved!</label>
-                                        <input type="text" class="form-control bg-dark text-white border-secondary shadow-none p-3" required>
+                                        <label for="fullName" class="form-label text-light">Add meg a teljes neved!</label>
+                                        <input type="text" id="fullName" class="form-control bg-dark text-white border-secondary shadow-none p-3" required>
                                     </div>
 
                                     <div class="mb-4">
-                                        <label class="form-label text-light">Hol tudjuk felvenni veled a kapcsolatot? (E-mail, Telefonszám)</label>
-                                        <textarea class="form-control bg-dark text-white border-secondary shadow-none p-3" rows="3" required></textarea>
+                                        <label for="contactInfo" class="form-label text-light">Hol tudjuk felvenni veled a kapcsolatot? (E-mail, Telefonszám)</label>
+                                        <textarea id="contactInfo" class="form-control bg-dark text-white border-secondary shadow-none p-3" rows="3" required></textarea>
                                     </div>
 
                                     <div class="mb-4">
                                         <label class="form-label text-light mb-3">Honnan hallottál rólunk?</label>
                                         
                                         <div class="form-check mb-2">
-                                            <input class="form-check-input bg-dark border-secondary bg-dark text-accent" type="checkbox" id="check1">
+                                            <input class="form-check-input border-secondary" type="checkbox" id="check1" value="Instagram">
                                             <label class="form-check-label text-light" for="check1">Instagram</label>
                                         </div>
                                         <div class="form-check mb-2">
-                                            <input class="form-check-input bg-dark border-secondary text-accent" type="checkbox" id="check2">
+                                            <input class="form-check-input border-secondary" type="checkbox" id="check2" value="Facebook">
                                             <label class="form-check-label text-light" for="check2">Facebook</label>
                                         </div>
                                         <div class="form-check mb-2">
-                                            <input class="form-check-input bg-dark border-secondary text-accent" type="checkbox" id="check3">
+                                            <input class="form-check-input border-secondary" type="checkbox" id="check3" value="Tiktok">
                                             <label class="form-check-label text-light" for="check3">Tiktok</label>
                                         </div>
                                         <div class="form-check mb-2">
-                                            <input class="form-check-input bg-dark border-secondary text-accent" type="checkbox" id="check4">
+                                            <input class="form-check-input border-secondary" type="checkbox" id="check4" value="Hirdetesek">
                                             <label class="form-check-label text-light" for="check4">Hirdetések</label>
                                         </div>
                                         <div class="form-check mb-2">
-                                            <input class="form-check-input bg-dark border-secondary text-accent" type="checkbox" id="check5">
+                                            <input class="form-check-input border-secondary" type="checkbox" id="check5" value="Ismeros">
                                             <label class="form-check-label text-light" for="check5">Ismerőstől</label>
                                         </div>
                                         <div class="form-check mb-2">
-                                            <input class="form-check-input bg-dark border-secondary text-accent" type="checkbox" id="check6">
+                                            <input class="form-check-input border-secondary" type="checkbox" id="check6" value="Senkitol">
                                             <label class="form-check-label text-light" for="check6">Eddig senkitől se hallottam</label>
                                         </div>
                                     </div>
                                     
-                                    <div class="d-flex justify-content-between mt-5">
+                                    <div class="d-flex justify-content-between mt-5 flex-wrap">
                                         <div>
                                             <button type="button" class="btn btn-outline-light btn-lg px-4 prev-step d-block d-md-inline-block mb-3 mb-md-0">Vissza</button>
                                             <button type="reset" class="btn btn-outline-secondary btn-lg px-3 ms-md-2 d-block d-md-inline-block mb-3 mb-md-0" id="resetBtn">Újratöltés</button>
@@ -257,7 +254,7 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <h3 class="text-accent font-oswald mb-3"><i class="fa-solid fa-scissors me-2"></i> Budapest <span class="text-white">Cut</span></h3>
-                    <p class="mb-4 small pe-4">Budapest Cut, ahol a hagyományos borbélymesterség találkozik a modern stílussal. Tapasztald meg a prémium minőséget egy barátságos környezetben.</p>
+                    <p class="mb-4 small pe-4 text-light">Budapest Cut, ahol a hagyományos borbélymesterség találkozik a modern stílussal. Tapasztald meg a prémium minőséget egy barátságos környezetben.</p>
                 </div>
                 
                 <div class="col-lg-2 col-md-6">
@@ -271,33 +268,32 @@
                 
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-3 font-oswald">Kapcsolat</h5>
-                    <ul class="list-unstyled small footer-contact">
+                    <ul class="list-unstyled small footer-contact text-light">
                         <li class="mb-2"><i class="fa-solid fa-location-dot text-accent me-2"></i> 1238 Budapest, Aranykalász utca 17.</li>
                         <li class="mb-2"><i class="fa-solid fa-phone text-accent me-2"></i> +36 70 600 6092</li>
-                        <li class="mb-2"><i class="fa-solid fa-envelope text-accent me-2"></i> ndndd0@inf.elte.hu</li>
+                        <li class="mb-2"><i class="fa-solid fa-envelope text-accent me-2"></i> info@budapestcut.hu</li>
                     </ul>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-3 font-oswald">Nyitvatartás</h5>
-                    <p class="small mb-1">Hétfő - Péntek: 09:00 - 20:00</p>
-                    <p class="small mb-1">Szombat: 09:00 - 16:00</p>
+                    <p class="small mb-1 text-light">Hétfő - Péntek: 09:00 - 20:00</p>
+                    <p class="small mb-1 text-light">Szombat: 09:00 - 16:00</p>
                     <p class="text-accent small fw-bold mt-2">Vasárnap: Zárva</p>
                 </div>
             </div>
             
             <div class="row align-items-center mt-4 pt-4 border-top border-secondary">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="small mb-0">&copy; Minden jog fenntartva.</p>
+                    <p class="small mb-0 text-light">&copy; Minden jog fenntartva.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-2 mt-md-0 d-flex justify-content-center justify-content-md-end gap-3">
-                    <a href="#" class=" small text-white text-decoration-none hover-accent">Jogi információk</a>
+                    <a href="arlista.html" class="small text-white text-decoration-none hover-accent">Szolgáltatásaink</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
