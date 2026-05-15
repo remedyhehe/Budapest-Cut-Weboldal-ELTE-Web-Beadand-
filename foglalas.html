@@ -57,7 +57,7 @@
                                     <div class="circle rounded-circle border border-2 border-secondary d-flex align-items-center justify-content-center bg-darker fs-2 font-oswald text-white">1.</div>
                                 </div>
                                 <div class="guide-content ps-4 ps-md-5">
-                                    <h3 class="font-oswald text-accent mb-3">Szolgáltatás kiválasztása</h3>
+                                    <h2 class="h3 font-oswald text-accent mb-3">Szolgáltatás kiválasztása</h2>
                                     <p class="text-light">Első lépésként válaszd ki a listából azt a szolgáltatást, amire szükséged van. Legyen szó egy precíz Normál hajvágásról, egy stílusos Skinfade átmenetről vagy egy teljes Szakáll és hajvágás csomagról, nálunk mindenre találsz opciót. Figyelj az időtartamokra is, hiszen minden szolgáltatásunkhoz fixen 40 percet biztosítunk, hogy ne kelljen kapkodni.</p>
                                 </div>
                             </article>
@@ -67,7 +67,7 @@
                                     <div class="circle rounded-circle border border-2 border-secondary d-flex align-items-center justify-content-center bg-darker fs-2 font-oswald text-white">2.</div>
                                 </div>
                                 <div class="guide-content ps-4 ps-md-5">
-                                    <h3 class="font-oswald text-accent mb-3">Borbély kiválasztása</h3>
+                                    <h2 class="h3 font-oswald text-accent mb-3">Borbély kiválasztása</h2>
                                     <p class="text-light">Miután megvagy a szolgáltatással, döntsd el, kihez szeretnél ülni a székbe. Választhatod a szalon alapítóját, Atyeszt, a modern stílusok mesterét, Dávidot, vagy a szakállak specialistáját, Balázst. Ha nincs preferenciád, egyszerűen válaszd az "Első szabad borbély" opciót a leggyorsabb időpontért.</p>
                                 </div>
                             </article>
@@ -77,7 +77,7 @@
                                     <div class="circle rounded-circle border border-2 border-secondary d-flex align-items-center justify-content-center bg-darker fs-2 font-oswald text-white">3.</div>
                                 </div>
                                 <div class="guide-content ps-4 ps-md-5">
-                                    <h3 class="font-oswald text-accent mb-3">Időpontkeresés</h3>
+                                    <h2 class="h3 font-oswald text-accent mb-3">Időpontkeresés</h2>
                                     <p class="text-light">A naptárban látni fogod a srácok szabad sávjait a hét minden napjára. Ne feledd, hogy hétköznap 09:00 és 20:00 között várunk, szombaton pedig 09:00-tól 16:00-ig tudsz foglalni. Keress egy olyan napot és órát, ami a legjobban illeszkedik a naptáradhoz, majd kattints rá a kiválasztáshoz.</p>
                                 </div>
                             </article>
@@ -87,7 +87,7 @@
                                     <div class="circle rounded-circle border border-2 border-secondary d-flex align-items-center justify-content-center bg-darker fs-2 font-oswald text-white">4.</div>
                                 </div>
                                 <div class="guide-content ps-4 ps-md-5">
-                                    <h3 class="font-oswald text-accent mb-3">Saját adatok megadása</h3>
+                                    <h2 class="h3 font-oswald text-accent mb-3">Saját adatok megadása</h2>
                                     <p class="text-light">Az utolsó lépésben kérünk, add meg a nevedet, telefonszámodat és az e-mail címedet. Erre azért van szükség, hogy küldhessünk egy visszaigazoló üzenetet, illetve emlékeztetőt a foglalásod előtt. Ha minden adat stimmel, kattints a "Foglalj időpontot!" gombra, és már kész is vagyunk.</p>
                                 </div>
                             </article>
@@ -147,7 +147,8 @@
                                     <div class="mb-4">
                                         <label for="barberSelect" class="form-label visually-hidden">Borbély</label>
                                         <select id="barberSelect" class="form-select form-select-lg bg-dark text-white border-secondary shadow-none" required>
-                                            <option value="0" selected>Első szabad borbély</option>
+                                            <option value="" disabled selected>Válassz a listából...</option>
+                                            <option value="0">Első szabad borbély</option>
                                             <option value="1">Atyesz</option>
                                             <option value="2">Dávid</option>
                                             <option value="3">Balázs</option>
@@ -258,7 +259,7 @@
                 </div>
                 
                 <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3 font-oswald">Gyorslinkek</h5>
+                    <h4 class="text-white mb-3 font-oswald">Gyorslinkek</h4>
                     <ul class="list-unstyled footer-links">
                         <li><a href="index.html">Kezdőlap</a></li>
                         <li><a href="arlista.html">Árlista</a></li>
@@ -267,7 +268,7 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-3 font-oswald">Kapcsolat</h5>
+                    <h4 class="text-white mb-3 font-oswald">Kapcsolat</h4>
                     <ul class="list-unstyled small footer-contact text-light">
                         <li class="mb-2"><i class="fa-solid fa-location-dot text-accent me-2"></i> 1238 Budapest, Aranykalász utca 17.</li>
                         <li class="mb-2"><i class="fa-solid fa-phone text-accent me-2"></i> +36 70 600 6092</li>
@@ -276,7 +277,7 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-3 font-oswald">Nyitvatartás</h5>
+                    <h4 class="text-white mb-3 font-oswald">Nyitvatartás</h4>
                     <p class="small mb-1 text-light">Hétfő - Péntek: 09:00 - 20:00</p>
                     <p class="small mb-1 text-light">Szombat: 09:00 - 16:00</p>
                     <p class="text-accent small fw-bold mt-2">Vasárnap: Zárva</p>
